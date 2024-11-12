@@ -1,38 +1,18 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
 }
 
-header h1 {
-    margin-bottom: 0.5rem;
-}
-
-main {
-    padding: 2rem;
-}
-
 section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    color: #4CAF50;
-    margin-bottom: 0.5rem;
+    padding: 1.5rem;
 }
 
 footer {
@@ -40,4 +20,8 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+#search {
+    margin-top: 2rem;
 }
