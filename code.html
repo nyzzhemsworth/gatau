@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Code Detail</h1>
+    </header>
+
+    <main>
+        <section id="code-detail">
+            <h2 id="code-title">Title of Code</h2>
+            <pre id="code-snippet">Code snippet will appear here</pre>
+            <button onclick="copyCode()">Copy Code</button>
+        </section>
+    </main>
+
+    <script>
+        const codeSnippets = {
+            "hello-world": "console.log('Hello World');",
+            "change-bg-color": "document.body.style.backgroundColor = 'blue';"
+            // Tambahkan kode lainnya
+        };
+
+        function loadCode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const codeId = urlParams.get('codeId');
+            if (codeId && codeSnippets[codeId]) {
+                document.getElementById('code-title').innerText = codeId.replace('-', ' ');
+                document.getElementById('code-snippet').innerText = codeSnippets[codeId];
+            } else {
+                document.getElementById('code-detail').innerText = "Code not found";
+            }
+        }
+
+        function copyCode() {
+            const codeSnippet = document.getElementById("code-snippet").innerText;
+            navigator.clipboard.writeText(codeSnippet).then(() => {
+                alert("Code copied to clipboard!");
+            });
+        }
+
+        loadCode();
+    </script>
+</body>
+</html>
