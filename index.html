@@ -3,41 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrape for All</title>
+    <title>JavaScript Code Library</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Scrape for All</h1>
-        <p>Website for Data Collection and Analysis</p>
+        <h1>JavaScript Code Library</h1>
+        <p>Explore various JavaScript code snippets and tutorials</p>
     </header>
-    
-    <!-- Main Content -->
+
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We provide various data scraping services tailored to your needs.</p>
-        </section>
-        
-        <section>
-            <h2>Our Services</h2>
+        <section id="categories">
+            <h2>Categories</h2>
             <ul>
-                <li>Data Extraction</li>
-                <li>Custom Web Scraping</li>
-                <li>Data Analysis</li>
+                <li><a href="category.html?category=basics">Basics</a></li>
+                <li><a href="category.html?category=dom-manipulation">DOM Manipulation</a></li>
+                <li><a href="category.html?category=api">API Usage</a></li>
+                <!-- Tambahkan kategori lainnya -->
             </ul>
         </section>
-        
-        <section>
-            <h2>Contact Us</h2>
-            <p>Email: contact@scrape-for-all.us.kg</p>
+
+        <section id="search">
+            <h2>Search Code Snippets</h2>
+            <input type="text" id="search-input" placeholder="Search for a code snippet...">
+            <button onclick="searchCode()">Search</button>
         </section>
     </main>
-    
-    <!-- Footer -->
+
     <footer>
-        <p>&copy; 2024 Scrape for All. All rights reserved.</p>
+        <p>&copy; 2024 JavaScript Code Library</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
